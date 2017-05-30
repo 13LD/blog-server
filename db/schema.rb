@@ -10,11 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170530192827) do
+=======
+ActiveRecord::Schema.define(version: 20170530222938) do
+>>>>>>> small config changes
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
+=======
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "body"
+    t.string   "excerpt"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
+
+>>>>>>> small config changes
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false
     t.string   "uid",                    default: "",      null: false
